@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <link rel="stylesheet" href="Login.css" />
+</head>
+<body>
+
+  <div class="container">
+    <form class="form" onsubmit="handleSubmit(event)">
+      <h2>Login Page</h2>
+
+      <input
+        type="text"
+        id="name"
+        placeholder="Enter your name"
+        class="input"
+        required
+      />
+
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter your password"
+        class="input"
+        required
+      />
+
+      <button type="submit" class="button">
+        Login
+      </button>
+
+      <p class="signup-text">
+        Don"t have an account? <a href="signup.html">Sign up</a>
+      </p>
+    </form>
+  </div>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const password = document.getElementById("password").value;
+
+      console.log("Name:", name);
+      console.log("Password:", password);
+      
+      window.location.href = "description.html";
+    }
+  </script>
+
+</body>
+</html>
